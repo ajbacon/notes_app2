@@ -1,12 +1,7 @@
-// function testNotesReturnsNoteModels() {
-//   var noteList = new NoteList();
-//   assert.includes("Note1", noteList.notes());
-// };
-// testNotesReturnsNoteModels()
-
 function testListCreatesNote() {
   var noteList = new NoteList();
-  var newNote = noteList.createNote('Test text');
-  assert.includes(newNote, noteList.notes());
+  var newNote = noteList.add('1', '2', '3');
+  var firstNote = noteList.showNotes()[0]
+  assert.eq('1', firstNote);
 };
 testListCreatesNote();
