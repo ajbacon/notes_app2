@@ -7,6 +7,8 @@ var assert = {
 
   includes: function(assertionToCheck, actual) {
     if (!actual.includes(assertionToCheck)) {
+      console.log(assertionToCheck)
+      console.log(actual)
       throw new Error("Assertion failed: " + assertionToCheck + " is not truthy");
     }
   }
