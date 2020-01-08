@@ -7,4 +7,4 @@ describe('NoteController', () => {
       expect(element.innerHTML).toEq('<ul><li><div>Favourite drink: sel</div></li></ul>')
     })
   })
-})
+});
