@@ -7,7 +7,7 @@
     htmlString: function(){
       return "<ul>" + this.noteListModel.showNotes().map(note => {
         console.log()
-        return `<li><a href='localhost:8080#notes/${note.getID()}'>` + note.read().substring(0, 20) + "</a></li>"
+        return `<li><a href='#notes/${note.getID()}'>` + note.read().substring(0, 20) + "</a></li>"
       }).join("") + "</ul>"
     }
   }

@@ -8,14 +8,19 @@
   </head>
   <body>
     <div id="app">hello!</div>
-    <script src="../lib/note-model.js"></script>
-    <script src="../lib/note-list-model.js"></script>
-    <script src="../lib/note-list-view.js"></script>
+    <div id="app3">hello3!</div>
+    <script src="js/note-model.js"></script>
+    <script src="js/note-list-model.js"></script>
+    <script src="js/note-list-view.js"></script>
+    <script src="js/single-note-view.js"></script>
     <script src="js/note-controller.js"></script>
+
     <script>
-      var noteController = new NoteController(new NoteList());
+      var noteList = new NoteList();
+      noteList.add('note1 78910121416182021')
+      var noteController = new NoteController(noteList);
       noteController.displayHtml();
-      
+      noteController.showNoteUrl()  
     </script>
   </body>
 </html>
