@@ -13,7 +13,12 @@
     return this.noteListModel.showNotes().find(note => note.id == id)
   }
 
+  
+
   NoteController.prototype.showNoteByUrl = function () {
+    var self = this;
+    console.log(self)
+    console.log(this)
     window.addEventListener("hashchange", showNoteForCurrentPage)
 
     function showNoteForCurrentPage () {
@@ -21,8 +26,10 @@
     }
 
     function getNoteFromUrl(location) {
+      console.log(self)
+      console.log(this)
       var id = location.hash.split("#notes/")[1]
-      return noteController.noteById(id);
+      return self.noteById(id);
     };
 
     function showNote(note) {
