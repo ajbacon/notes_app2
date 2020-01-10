@@ -34,5 +34,16 @@
 
   }
 
+  NoteController.prototype.addNote = function (formElement = document.getElementById("text")) {
+    var self = this;
+    formElement.addEventListener("submit", function(event) {
+      event.preventDefault()
+      var textBox = document.getElementById("new-note")
+      self.noteListModel.add(textBox.value)
+      self.displayHtml()
+      textBox.value = ""
+    })
+  }
+
   exports.NoteController = NoteController
 })(this)
