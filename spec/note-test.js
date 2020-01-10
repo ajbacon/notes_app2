@@ -7,6 +7,7 @@ testReadReturnsText();
 describe('NoteModel', () => {
   describe('.getID', () => {
     it('should return the specific ID of the note', () => {
+      // location.reload()
       var note0 = new Note("Test note 1")
       var note1 = new Note("Test note 2")
       expect(note1.getID()).toEq(note0.getID() + 1)
