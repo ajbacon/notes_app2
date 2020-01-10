@@ -4,23 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     <title>Document</title>
   </head>
   <body>
     <div id="app">hello!</div>
-    <div id="app3">hello3!</div>
+    <div id="note-view"><div>
+      
     <script src="js/note-model.js"></script>
     <script src="js/note-list-model.js"></script>
     <script src="js/note-list-view.js"></script>
     <script src="js/single-note-view.js"></script>
     <script src="js/note-controller.js"></script>
-
     <script>
-      var noteList = new NoteList();
-      noteList.add('note1 78910121416182021')
-      var noteController = new NoteController(noteList);
-      noteController.displayHtml();
-      noteController.showNoteUrl()  
+        var noteList = new NoteList();
+        noteList.add('ToDo List: figure out this note app!!! Ahhhhhh!!!')
+        noteList.add('shopping list: bread, eggs, cheese')
+        var noteController = new NoteController(noteList);
+        noteController.displayHtml();
+        noteController.showNoteByUrl()  
     </script>
   </body>
 </html>
