@@ -15,12 +15,13 @@
 
 
 
-  NoteController.prototype.showNoteByUrl = function () {
+  NoteController.prototype.showNoteByUrl = function (windowObject = window, element = document.getElementById("note-view")) {
     var self = this;
-    window.addEventListener("hashchange", showNoteForCurrentPage)
+    console.log(windowObject)
+    windowObject.addEventListener("hashchange", showNoteForCurrentPage)
 
     function showNoteForCurrentPage () {
-      showNote(getNoteFromUrl(window.location))
+      showNote(getNoteFromUrl(windowObject.location))
     }
 
     function getNoteFromUrl(location) {
@@ -29,7 +30,7 @@
     };
 
     function showNote(note) {
-      document.getElementById("note-view").innerHTML = note.read();
+      element.innerHTML = note.read();
     };
 
   }
